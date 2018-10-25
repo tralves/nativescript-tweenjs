@@ -6,6 +6,8 @@ This plugin will expose a `TWEEN` global variable and create a bunch of polyfill
 
 Tween.js will tween variable, which you can then attach to ANY UI attribute.
 
+> NOTE: NativeScript's [declarative and imperative animations](https://docs.nativescript.org/ui/animation) will always be more performant. Use Tween.js sparingly and only if you need to tween a paramenter not available in the current NativeScript APIs.
+
 ## Installation
 
 ### NativeScript 4.x
