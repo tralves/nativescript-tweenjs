@@ -1,0 +1,44 @@
+{
+  "name": "nativescript-tweenjs",
+  "version": "0.1.0",
+  "description": "A NativeScript plugin to use tween.js in NativeScript projects. ",
+  "main": "tweenjs.js",
+  "nativescript": {
+    "platforms": {
+      "android": "4.0.0",
+      "ios": "4.0.0"
+    },
+    "plugin": {
+      "pan": "true",
+      "core3": "false",
+      "core4": "true",
+      "category": "Interface"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tralves/nativescript-tweenjs.git"
+  },
+  "keywords": [
+    "NativeScript",
+    "tween",
+    "ui",
+    "animations"
+  ],
+  "author": {
+    "name": "Tiago Alves",
+    "email": "tralves@gmail.com"
+  },
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/tralves/nativescript-tweenjs/blob/master/LICENSE"
+  },
+  "bugs": {
+    "url": "https://github.com/tralves/nativescript-tweenjs/issues"
+  },
+  "homepage": "https://github.com/tralves/nativescript-tweenjs",
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "@tweenjs/tween.js": "^17.2.0"
+  }
+}
