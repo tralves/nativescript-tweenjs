@@ -1,44 +1,43 @@
 /**********************************************************************************
- * (c) 2016-2018, Master Technology
- * Licensed under the MIT license or contact me for a Support or Commercial License
- *
+ * (c) 2018
+ * Licensed under the MIT license
  * Any questions please feel free to email me or put a issue up on the github repo
  * Version 1.0.0                                                 tralves@gmail.com
  *********************************************************************************/
-'use strict'
+'use strict';
 
-const TWEEN = require('@tweenjs/tween.js')
+const TWEEN = require('@tweenjs/tween.js');
 
 // Workaround to make tweenjs work in an env that is
 // not really web and it is not really node...
 TWEEN.now = function() {
-  return new Date().getTime()
-}
+  return new Date().getTime();
+};
 
 //////////////////////////
 // requestAnimationFrame polyill
-let lastTime = 0
+let lastTime = 0;
 
 const requestAnimationFrame = function(callback, element) {
-  var currTime = new Date().getTime()
-  var timeToCall = Math.max(0, 16 - (currTime - lastTime))
+  var currTime = new Date().getTime();
+  var timeToCall = Math.max(0, 16 - (currTime - lastTime));
   var id = setTimeout(function() {
-    callback(currTime + timeToCall)
-  }, timeToCall)
-  lastTime = currTime + timeToCall
-  return id
-}
+    callback(currTime + timeToCall);
+  }, timeToCall);
+  lastTime = currTime + timeToCall;
+  return id;
+};
 //////////////////////////
 
 const cancelAnimationFrame = function(id) {
-  clearTimeout(id)
-}
+  clearTimeout(id);
+};
 
 // ticking tween.js
 const tick = () => {
-  requestAnimationFrame(tick)
-  TWEEN.update()
-}
-requestAnimationFrame(tick)
+  requestAnimationFrame(tick);
+  TWEEN.update();
+};
+requestAnimationFrame(tick);
 
-global.TWEEN = TWEEN
+module.exports = { TWEEN };
