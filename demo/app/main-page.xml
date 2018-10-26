@@ -2,5 +2,8 @@
   xmlns:ui="nativescript-tweenjs">
   <StackLayout class="p-20">
     <Label text="{{ message }}" height="{{ bungee }}" class="t-20 text-center c-black bg-primary" textWrap="true"/>
+
+    <Button text="NativeScript" width="{{ btnWidth }}" height="{{ btnHeight }}" tap="{{ onTap }}" class="btn-primary" />
+    
   </StackLayout>
 </Page>
