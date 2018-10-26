@@ -1,7 +1,6 @@
 /**********************************************************************************
- * (c) 2016-2018, Master Technology
- * Licensed under the MIT license or contact me for a Support or Commercial License
- *
+ * (c) 2018
+ * Licensed under the MIT license
  * Any questions please feel free to email me or put a issue up on the github repo
  * Version 1.0.0                                                 tralves@gmail.com
  *********************************************************************************/
