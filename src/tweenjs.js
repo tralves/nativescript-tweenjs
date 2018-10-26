@@ -40,4 +40,4 @@ const tick = () => {
 }
 requestAnimationFrame(tick)
 
-global.TWEEN = TWEEN
+module.exports = { TWEEN }
