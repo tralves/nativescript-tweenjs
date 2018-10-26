@@ -2,7 +2,7 @@
 
 # nativescript-tweenjs
 
-This plugin will expose a `TWEEN` global variable and create a bunch of polyfills so you can use tweenjs in your NativeScript app.
+This plugin returns a working `TWEEN` object and creates a bunch of polyfills so you can use tweenjs in your NativeScript app.
 
 Tween.js will tween variable, which you can then attach to ANY UI attribute.
 
@@ -29,7 +29,13 @@ This is released under the MIT License, meaning you are free to include this in 
 To use the module you just `require()` it:
 
 ```js
-require('nativescript-tweenjs')
+var TWEEN = require('nativescript-tweenjs').TWEEN;
+```
+
+or `import` it:
+
+```js
+import { TWEEN } from 'nativescript-tweenjs');
 ```
 
 ### Example (from the [demo app](demo/))
@@ -50,24 +56,25 @@ In this example we will tween a label's text and its height.
 - `main-page.ts`
 
 ```typescript
-import * as observable from 'tns-core-modules/data/observable'
-import * as pages from 'tns-core-modules/ui/page'
-import { HelloWorldModel } from './main-view-model'
+import * as observable from 'tns-core-modules/data/observable';
+import * as pages from 'tns-core-modules/ui/page';
+import { HelloWorldModel } from './main-view-model';
+import { TWEEN } from 'nativescript-tweenjs';
 
 // Event handler for Page 'loaded' event attached in main-page.xml
 export function pageLoaded(args: observable.EventData) {
   // Get the event sender
-  let page = <pages.Page>args.object
-  page.bindingContext = new HelloWorldModel()
+  let page = <pages.Page>args.object;
+  page.bindingContext = new HelloWorldModel();
 
   var tween = new TWEEN.Tween({ x: 50 })
     .to({ x: 400 }, 5000)
     .easing(TWEEN.Easing.Elastic.InOut)
-    .onUpdate(function(object) {
-      page.bindingContext.set('message', Math.round(object.x))
-      page.bindingContext.set('bungee', object.x)
+    .onUpdate(object => {
+      page.bindingContext.set('message', Math.round(object.x));
+      page.bindingContext.set('bungee', object.x);
     })
-    .start()
+    .start();
 }
 ```
 

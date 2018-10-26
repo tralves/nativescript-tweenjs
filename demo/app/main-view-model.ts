@@ -1,5 +1,5 @@
-import { Observable, EventData } from "tns-core-modules/data/observable";
-import { TWEEN } from "nativescript-tweenjs";
+import { Observable, EventData } from 'tns-core-modules/data/observable';
+import { TWEEN } from 'nativescript-tweenjs';
 
 export class HelloWorldModel extends Observable {
   public message: string;
@@ -8,7 +8,7 @@ export class HelloWorldModel extends Observable {
   constructor() {
     super();
 
-    this.message = "0";
+    this.message = '0';
     this.bunjee = 0;
   }
 
@@ -17,7 +17,7 @@ export class HelloWorldModel extends Observable {
       .to({ x: 400 }, 5000)
       .easing(TWEEN.Easing.Elastic.InOut)
       .onUpdate(object => {
-        this.set("btnWidth", object.x);
+        this.set('btnWidth', object.x);
       })
       .start();
   }
