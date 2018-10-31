@@ -1,6 +1,6 @@
 {
   "name": "nativescript-tweenjs",
-  "version": "0.1.0",
+  "version": "0.9.0",
   "description": "A NativeScript plugin to use tween.js in NativeScript projects. ",
   "main": "tweenjs.js",
   "nativescript": {
