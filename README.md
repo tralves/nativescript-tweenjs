@@ -1,5 +1,9 @@
 [![npm](https://img.shields.io/npm/v/nativescript-tweenjs.svg)](https://www.npmjs.com/package/nativescript-tweenjs) [![npm](https://img.shields.io/npm/l/nativescript-tweenjs.svg)](https://www.npmjs.com/package/nativescript-tweenjs) [![npm](https://img.shields.io/npm/dt/nativescript-tweenjs.svg?label=npm%20d%2fls)](https://www.npmjs.com/package/nativescript-tweenjs)
 
+# Attention: This plugin is no longer necessary!
+
+Since version 6.3.0 NativeScript has a native `requestAnimationFrame`, so this plugin is no longer needed. `tween.js` will work out of the box.  
+
 # nativescript-tweenjs
 
 This plugin returns a working `TWEEN` object and creates a bunch of polyfills so you can use tweenjs in your NativeScript app.
@@ -18,7 +22,7 @@ tns plugin add nativescript-tweenjs
 
 ## License
 
-This is released under the MIT License, meaning you are free to include this in any type of program -- However for entities that need a support contract, changes, enhancements and/or a commercial license please contact me at [http://nativescript.tools](http://nativescript.tools).
+This is released under the MIT License, meaning you are free to include this in any type of program.
 
 ## Sample Snapshot
 
