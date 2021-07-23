@@ -1,6 +1,6 @@
 [![npm](https://img.shields.io/npm/v/nativescript-tweenjs.svg)](https://www.npmjs.com/package/nativescript-tweenjs) [![npm](https://img.shields.io/npm/l/nativescript-tweenjs.svg)](https://www.npmjs.com/package/nativescript-tweenjs) [![npm](https://img.shields.io/npm/dt/nativescript-tweenjs.svg?label=npm%20d%2fls)](https://www.npmjs.com/package/nativescript-tweenjs)
 
-# Attention: This plugin is no longer necessary!
+# DEPRECATED: This plugin is no longer necessary!
 
 Since version 6.3.0 NativeScript has a native `requestAnimationFrame`, so this plugin is no longer needed. `tween.js` will work out of the box.  
 
